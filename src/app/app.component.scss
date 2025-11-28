@@ -1,0 +1,166 @@
+.stylesReset {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.section {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  min-width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  &_title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.form {
+  &_length {
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  &_title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &_input {
+    display: flex;
+    font-size: 10px;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: space-between;
+    border-radius: 5px;
+
+    &-name {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      align-self: center;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.button {
+  padding: 10px 14px;
+  background: #4b72ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s ease;
+  margin: 5px;
+
+  &:hover {
+    background: #e8b76d;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.form div > .button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.passBox {
+  background: #eef2ff;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  word-break: break-all;
+
+  &_label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  &_value {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+
+.copyBtn {
+  background: #4b72ff;
+
+  &:hover {
+    background: #99affd;
+  }
+}
+
+.generateBtn {
+  background-color: #b36d05;
+
+    &:hover {
+    background-color: #e8b76d;
+  }
+}
+
+.isActive {
+  background-color: #b36d05;
+}
+
+.notification {
+  margin-top: 8px;
+  text-align: right;
+}
+.success {
+  color: green;
+}
+
+.fail {
+  color: red;
+}
