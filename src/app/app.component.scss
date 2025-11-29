@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-main {
+.main {
   display: flex;
   justify-content: center;
   padding: 20px 40px;
@@ -20,7 +20,7 @@ main {
   max-width: 420px;
   min-width: 320px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
+  
   &_title {
     font-size: 28px;
     margin-bottom: 20px;
@@ -32,6 +32,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0;
+  }
+  .section {
+    padding: 20px;
   }
 }
 
@@ -50,6 +59,7 @@ main {
 
   &_input {
     display: flex;
+    position: relative;
     font-size: 10px;
     flex-direction: row;
     gap: 6px;
@@ -60,6 +70,14 @@ main {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       align-self: center;
+    }
+
+    &-alert {
+      position: absolute;
+      top: 60%;
+      font-size: 14px;
+      color: #ef0b0b;
+      width: 90%;
     }
   }
 
@@ -158,9 +176,9 @@ main {
   text-align: right;
 }
 .success {
-  color: green;
+  color: #36d804;
 }
 
 .fail {
-  color: red;
+  color: #ef0b0b;
 }

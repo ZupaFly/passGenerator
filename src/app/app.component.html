@@ -1,4 +1,4 @@
-<main>
+<main class="main">
   <section class="section">
     <h1 class="section_title">Password generator</h1>
     <form class="section_form form">
@@ -10,7 +10,12 @@
           type="number"
           class="form_length"
           [(ngModel)]="useLength"
-          name="length" />
+          name="length"
+          min="4"
+          max="20"
+          (input)="validateLength($event)"
+        />
+        <h5 class="form_input-alert" *ngIf="passFail">Pass length should be from 4 to 20</h5>
       </div>
 
       <div class="form_input">

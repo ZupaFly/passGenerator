@@ -22,8 +22,39 @@ export class AppComponent {
   success: boolean = false;
   fail: boolean = false;
   loading: boolean = false;
+  passFail: boolean = false;
+  inputTimeout: any = null;
 
   constructor(private http: HttpClient) {}
+  
+  validateLength(event: any) {
+    const input = event.target as HTMLInputElement;
+
+  if (this.inputTimeout) {
+    clearTimeout(this.inputTimeout);
+  }
+
+  this.inputTimeout = setTimeout(() => {
+    const value = Number(input.value);
+
+    if (value < 4) {
+      this.useLength = 4;
+      input.value = '4';
+      this.passFail = true;
+    } else if (value > 20) {
+      this.useLength = 20;
+      input.value = '20';
+      this.passFail = true;
+    } else {
+      this.useLength = value;
+    }
+
+    input.blur();
+
+    this.inputTimeout = null;
+  }, 700);
+  setTimeout(() => (this.passFail = false), 3000);
+}
 
   triggerValidation() {
     if (!this.isValid()) {
